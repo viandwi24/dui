@@ -1,5 +1,11 @@
-# DUI
-A Duolingo-style-like UI built for React Native Expo applications.
+<div align="center">
+<center>
+  <img src="./assets/images/preview.png" alt="preview" width="150"/>
+  <img src="./assets/images/preview2.png" alt="preview" width="150"/>
+  <h1>DUI</h1>
+  <p>A Duolingo-style-like UI built for React Native Expo applications.</p>
+</center>
+</div>
 
 ## Dependencies
 - [x] React Native Css
