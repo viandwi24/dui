@@ -22,6 +22,7 @@ export function ExpoRouterTabBar(props: ExpoRouterTabBarProps) {
         return (
           <View key={route.key} className="flex flex-row items-center gap-2">
             <OutlineIconButton
+              
               icon={
                 options.tabBarIcon
                   ? options.tabBarIcon({
@@ -31,7 +32,7 @@ export function ExpoRouterTabBar(props: ExpoRouterTabBarProps) {
                     })
                   : undefined
               }
-              color={isActive ? "default" : "transparent"}
+              color={isActive ? "primary" : "transparent"}
               // text={props.descriptors[route.key].options.title}
               // text={`${props.state.index}-${index} (${props.state.index === index ? 'active' : 'inactive'})`}
               onPressIn={() => {

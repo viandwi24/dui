@@ -8,13 +8,14 @@ import { View } from './view';
 
 // DEFAULT
 const buttonVariants = cva(
-  'border-none transition-all duration-300 rounded-xl shadow-[0_6px_0_0] shadow-blue-500 flex active:shadow-[0_0px_0_0] active:translate-y-2',
+  'border-none transition-all duration-300 rounded-xl shadow-[0_6px_0_0] shadow-primary-500 flex active:shadow-[0_0px_0_0] active:translate-y-2',
   {
     variants: {
       color: {
-        default: 'bg-foreground text-white border-blue-500 shadow-blue-500',
-        primary: 'bg-blue-400 border-blue-500 shadow-blue-500',
+        default: 'bg-neutral-950 border-neutral-800 shadow-neutral-800 dark:bg-neutral-50 dark:border-neutral-300 dark:shadow-neutral-300',
+        primary: 'bg-primary-400 border-primary-500 shadow-primary-500',
         danger: 'bg-red-400 border-red-500 shadow-red-500',
+        success: 'bg-green-400 border-green-500 shadow-green-500',
       },
       size: {
         sm: 'px-2.5 py-1.5',
@@ -36,9 +37,10 @@ const buttonSubTextVariants = cva(
   {
     variants: {
       color: {
-        default: '',
-        danger: '',
-        primary: '',
+        default: 'text-neutral-50 dark:text-neutral-950',
+        danger: 'text-neutral-50 dark:text-neutral-50',
+        primary: 'text-neutral-50 dark:text-neutral-50',
+        success: 'text-neutral-50 dark:text-neutral-50',
       },
       size: {
         sm: '',
@@ -62,14 +64,14 @@ const Button = React.forwardRef<React.ElementRef<typeof TouchableOpacity>, Butto
   const showText = () => {
     if (!props.text) return null
     return (
-      <Text className={cn(buttonSubTextVariants({ color, size, className }), 'text-center')}>
+      <Text className={cn(buttonSubTextVariants({ color, size }), 'text-center', className)}>
         {props.text}
       </Text>
     )
   }
   return (
     <TouchableOpacity
-      className={cn(buttonVariants({ color, size, className }))}
+      className={cn(buttonVariants({ color, size }), className)}
       ref={ref}
       activeOpacity={70}
       onPressIn={(e) => {
@@ -94,8 +96,11 @@ const outlineButtonVariants = cva(
   {
     variants: {
       color: {
-        default: 'border-blue-400 text-blue-400 bg-blue-400/20',
-        transparent: 'border-transparent text-gray-500'
+        default: 'border-neutral-950/50 text-neutral-950 bg-neutral-50 dark:border-neutral-50/50 dark:text-neutral-50 dark:bg-neutral-950',
+        transparent: 'border-transparent text-gray-500',
+        danger: 'border-red-400 text-red-400 bg-red-400/20',
+        success: 'border-green-400 text-green-400 bg-green-400/20',
+        primary: 'border-primary-400 text-primary-400 bg-primary-400/20',
       },
       size: {
         sm: 'px-2.5 py-1.5',
@@ -121,7 +126,7 @@ const OutlineIconButton = React.forwardRef<React.ElementRef<typeof TouchableOpac
   ({ children, className, size, icon, color, onPressIn, ...props }, ref) => {
   const showText = () => {
     if (!props.text) return null
-    return <Text className="text-blue-500">{props.text}</Text>
+    return <Text className="text-primary-500">{props.text}</Text>
   }
   return (
     <TouchableOpacity

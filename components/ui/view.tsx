@@ -1,5 +1,6 @@
 import * as React from 'react';
 import RN from "react-native";
+
 // @ts-ignore
 import * as NW from 'nativewind';
 export const ViewStyled = NW.styled(RN.View, { className: "style" });
@@ -50,3 +51,9 @@ export const CustomView = (props: RN.ViewProps) => {
 }
 
 export const View = NW.styled(CustomView, { className: "style" }) as typeof RN.View;
+
+export const ScrollView = NW.styled(RN.ScrollView, {
+  className: "style",
+  classNameIndicator: "indicatorStyle",
+  classNameContentContainer: "contentContainerStyle",
+}) as typeof RN.ScrollView;
