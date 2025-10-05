@@ -1,5 +1,5 @@
 # DUI
-A UI inspired by Duolingo for React Native Expo apps.
+A Duolingo-style-like UI built for React Native Expo applications.
 
 ## Dependencies
 - [x] React Native Css
@@ -40,3 +40,4 @@ bunx expo customize metro.config.js
 - [x] Icon (with Monicon)
 - [x] Button
 - [x] Card
+- [x] Switch
