@@ -5,7 +5,7 @@ import { Text, View } from "@/components/ui";
 
 export default function ModalScreen() {
   return (
-    <View style={styles.container}>
+    <View style={styles.container} className="bg-muted-950">
       <Text type="title">This is a modal</Text>
       <Link href="/" dismissTo style={styles.link}>
         <Text type="link">Go to home screen</Text>

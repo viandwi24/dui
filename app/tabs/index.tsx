@@ -38,6 +38,13 @@ export default function HomeScreen() {
       >
         <Text className="text-background font-bold">back to home</Text>
       </TouchableHighlight>
+
+      <TouchableHighlight
+        className="mt-4 px-6 py-3 rounded-lg bg-secondary"
+        onPress={() => router.push("/modal")}
+      >
+        <Text className="text-background font-bold">Open Modal</Text>
+      </TouchableHighlight>
     </View>
   );
 }
