@@ -1,5 +1,8 @@
 import {
   Button,
+  Card,
+  CardContent,
+  CardHeader,
   Icon,
   OutlineIconButton,
   SafeAreaScrollView,
@@ -58,6 +61,49 @@ export default function ComponentsScreen() {
               text="With Text"
             />
           </View>
+        </View>
+        <View className="flex flex-col gap-4">
+          <Text type="h2">Card</Text>
+          <Card>
+            <CardHeader>
+              <Text type="h2">Default Card</Text>
+            </CardHeader>
+            <CardContent>
+              <Text>This is a default card with some content inside.</Text>
+            </CardContent>
+          </Card>
+          <Card variant="outlined">
+            <CardHeader>
+              <Text type="h2">Outlined Card</Text>
+            </CardHeader>
+            <CardContent>
+              <Text>This card has an outlined blue border.</Text>
+            </CardContent>
+          </Card>
+          <Card variant="success">
+            <CardHeader>
+              <Text type="h2">Success Card</Text>
+            </CardHeader>
+            <CardContent>
+              <Text>This card indicates a successful state.</Text>
+            </CardContent>
+          </Card>
+          <Card variant="warning">
+            <CardHeader>
+              <Text type="h2">Warning Card</Text>
+            </CardHeader>
+            <CardContent>
+              <Text>This card indicates a warning state.</Text>
+            </CardContent>
+          </Card>
+          <Card variant="danger">
+            <CardHeader>
+              <Text type="h2">Danger Card</Text>
+            </CardHeader>
+            <CardContent>
+              <Text>This card indicates a danger state.</Text>
+            </CardContent>
+          </Card>
         </View>
         <View className="flex flex-col gap-4">
           <Text type="h2">Switch</Text>

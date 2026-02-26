@@ -59,6 +59,7 @@ export function SafeAreaScrollView({
 
 export { useSafeAreaInsets } from "react-native-safe-area-context";
 export * from "./button";
+export * from "./card";
 export * from "./icon";
 export * from "./router";
 export * from "./switch";

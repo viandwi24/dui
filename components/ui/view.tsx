@@ -15,7 +15,7 @@ export const View = styled(
     className: "style",
   },
   {
-    passThrough: true,
+    // passThrough: true,
   },
 ) as unknown as typeof RN.View;
 
@@ -30,3 +30,5 @@ export const ScrollView = styled(
     // passThrough: true,
   },
 ) as unknown as typeof RN.ScrollView;
+
+export { ViewProps } from "react-native";
