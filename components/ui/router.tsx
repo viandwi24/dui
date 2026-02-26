@@ -1,5 +1,5 @@
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
-import * as Haptics from 'expo-haptics';
+import * as Haptics from "expo-haptics";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { OutlineIconButton } from "./button";
 import { View } from "./view";
@@ -13,7 +13,7 @@ export function ExpoRouterTabBar(props: ExpoRouterTabBarProps) {
 
   return (
     <View
-      className="h-[100px] flex flex-row justify-center gap-4 items-center border-t bg-neutral-50 border-neutral-200 dark:bg-neutral-950 dark:border-neutral-800"
+      className="h-25 flex flex-row justify-center gap-4 items-center border-t bg-neutral-50 border-neutral-200 dark:bg-neutral-950 dark:border-neutral-900"
       style={{ paddingBottom: inset.bottom / 1.5 }}
     >
       {props.state.routes.map((route, index) => {
@@ -22,7 +22,6 @@ export function ExpoRouterTabBar(props: ExpoRouterTabBarProps) {
         return (
           <View key={route.key} className="flex flex-row items-center gap-2">
             <OutlineIconButton
-              
               icon={
                 options.tabBarIcon
                   ? options.tabBarIcon({

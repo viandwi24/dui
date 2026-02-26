@@ -1,4 +1,4 @@
-import { Monicon } from '@monicon/native';
+import { Monicon } from "@monicon/native";
 // @ts-ignore
 // import * as NW from 'nativewind';
 // import { JSX } from 'react';
@@ -10,8 +10,6 @@ export const Icon = Monicon;
 // export const Icon = (AStyled(Monicon, {
 //   className: "style"
 // })) as (props: MoniconProps & { className?: string }) => JSX.Element;
-
-
 
 // export type MoniconPropsWithClassName = MoniconProps & {
 //   className?: string

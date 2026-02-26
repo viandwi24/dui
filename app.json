@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "app",
-    "slug": "app",
+    "name": "expo-nativewind",
+    "slug": "expo-nativewind",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "app",
+    "scheme": "exponativewind",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {

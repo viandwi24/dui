@@ -1,44 +1,67 @@
-// @ts-ignore
+import { View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { ScrollView } from "./view";
 
-export { SafeAreaView } from "react-native-safe-area-context";
+export function SafeAreaView({
+  children,
+  className,
+  bottom = true,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  bottom?: boolean;
+}) {
+  const insets = useSafeAreaInsets();
+  return (
+    <View
+      style={{
+        paddingTop: insets.top,
+        paddingBottom: bottom ? insets.bottom : 0,
+      }}
+      className={className}
+    >
+      {children}
+    </View>
+  );
+}
+
+// className: "style",
+// classNameIndicator: "indicatorStyle",
+// classNameContentContainer: "contentContainerStyle",
+export function SafeAreaScrollView({
+  children,
+  className,
+  classNameIndicator,
+  classNameContentContainer,
+  bottom = true,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  classNameIndicator?: string;
+  classNameContentContainer?: string;
+  bottom?: boolean;
+}) {
+  const insets = useSafeAreaInsets();
+  return (
+    <ScrollView
+      style={{
+        paddingTop: insets.top,
+        paddingBottom: bottom ? insets.bottom : 0,
+      }}
+      className={className}
+      indicatorClassName={classNameIndicator}
+      contentContainerClassName={classNameContentContainer}
+    >
+      {children}
+    </ScrollView>
+  );
+}
+
+export { useSafeAreaInsets } from "react-native-safe-area-context";
 export * from "./button";
-export * from "./card";
-export * from './icon';
+export * from "./icon";
 export * from "./router";
 export * from "./switch";
 export * from "./text";
 export * from "./view";
-// export * from "./gradient";
-// export * from "./input";
-// export * from "./toast";
 
-// export type MoniconPropsWithClassName = MoniconProps & {
-//   className?: string
-// }
-
-// const BaseIcon = cssInterop(
-//   Monicon as React.ComponentType<MoniconPropsWithClassName>,
-//   {
-//     className: {
-//       target: 'className',
-//       nativeStyleToProp: {
-//         color: true,
-//       },
-//     },
-//   },
-// )
-
-// export const Icon: React.FC<MoniconPropsWithClassName> = (props) => {
-//   const { color, className, name, size, ...restProps } = props as any
-
-//   if (Platform.OS === 'web') {
-//     return (
-//       <span className={className}>
-//         <BaseIcon name={name} size={size} {...restProps} />
-//       </span>
-//     )
-//   }
-
-//   // Native platforms: forward props directly.
-//   return <BaseIcon name={name} size={size} {...restProps} className={className} />
-// }
