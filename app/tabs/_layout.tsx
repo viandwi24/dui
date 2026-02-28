@@ -22,9 +22,6 @@ export default function TabLayout() {
         options={{
           title: "Home",
           tabBarIcon: ({ color, focused }) => (
-            // <View>
-            //   <Text>wae</Text>
-            // </View>
             <Icon
               name={focused ? "ph:house-fill" : "ph:house-duotone"}
               size={20}
@@ -38,11 +35,25 @@ export default function TabLayout() {
         options={{
           title: "Components",
           tabBarIcon: ({ color, focused }) => (
-            // <View>
-            //   <Text>wae</Text>
-            // </View>
             <Icon
               name={focused ? "ph:package-fill" : "ph:package-duotone"}
+              size={20}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="feeds"
+        options={{
+          title: "Feeds",
+          tabBarIcon: ({ color, focused }) => (
+            <Icon
+              name={
+                focused
+                  ? "ph:chat-centered-dots-fill"
+                  : "ph:chat-centered-dots-duotone"
+              }
               size={20}
               color={color}
             />

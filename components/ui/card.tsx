@@ -4,7 +4,7 @@ import * as React from "react";
 import { View as RNView } from "react-native";
 import { View, ViewProps } from "./view";
 
-const cardVariants = cva("rounded-lg border-[3px] overflow-hidden", {
+const cardVariants = cva("rounded-xl border-[3px] overflow-hidden", {
   variants: {
     variant: {
       default: "border-neutral-200 dark:border-neutral-800",

@@ -4,6 +4,18 @@
 @import "nativewind/theme";
 
 @theme {
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --color-gray-950: #030712;
+
   --color-primary-50: #eff6ff;
   --color-primary-100: #dbeafe;
   --color-primary-200: #bfdbfe;
@@ -28,6 +40,18 @@
   --color-secondary-900: #4c1d95;
   --color-secondary-950: #2e1065;
 
+  --color-background-50: #fafafa;
+  --color-background-100: #f5f5f5;
+  --color-background-200: #e5e5e5;
+  --color-background-300: #d4d4d4;
+  --color-background-400: #a3a3a3;
+  --color-background-500: #737373;
+  --color-background-600: #525252;
+  --color-background-700: #404040;
+  --color-background-800: #262626;
+  --color-background-900: #171717;
+  --color-background-950: #030712;
+
   --color-muted-50: #ffffff;
   --color-muted-100: #f9fafb;
   --color-muted-200: #f3f4f6;
@@ -39,6 +63,30 @@
   --color-muted-800: #374151;
   --color-muted-900: #1f2937;
   --color-muted-950: #111827;
+
+  --color-success-50: #f0fdf4;
+  --color-success-100: #dcfce7;
+  --color-success-200: #bbf7d0;
+  --color-success-300: #86efac;
+  --color-success-400: #4ade80;
+  --color-success-500: #22c55e;
+  --color-success-600: #16a34a;
+  --color-success-700: #15803d;
+  --color-success-800: #166534;
+  --color-success-900: #14532d;
+  --color-success-950: #052e16;
+
+  --color-error-50: #fef2f2;
+  --color-error-100: #fee2e2;
+  --color-error-200: #fecaca;
+  --color-error-300: #fca5a5;
+  --color-error-400: #f87171;
+  --color-error-500: #ef4444;
+  --color-error-600: #dc2626;
+  --color-error-700: #b91c1c;
+  --color-error-800: #991b1b;
+  --color-error-900: #7f1d1d;
+  --color-error-950: #450a0a;
 }
 
 @utility bg-background {
@@ -99,4 +147,28 @@
 
 @utility border-muted {
   border-color: var(--color-muted);
+}
+
+@utility bg-success {
+  background-color: var(--color-success);
+}
+
+@utility text-success {
+  color: var(--color-success);
+}
+
+@utility border-success {
+  border-color: var(--color-success);
+}
+
+@utility bg-error {
+  background-color: var(--color-error);
+}
+
+@utility text-error {
+  color: var(--color-error);
+}
+
+@utility border-error {
+  border-color: var(--color-error);
 }

@@ -13,7 +13,7 @@ export function ExpoRouterTabBar(props: ExpoRouterTabBarProps) {
 
   return (
     <View
-      className="h-25 flex flex-row justify-center gap-4 items-center border-t bg-neutral-50 border-neutral-200 dark:bg-neutral-950 dark:border-neutral-900"
+      className="h-25 flex flex-row justify-center gap-4 items-center border-t bg-gray-50 border-gray-200 dark:bg-gray-950 dark:border-gray-900"
       style={{ paddingBottom: inset.bottom / 1.5 }}
     >
       {props.state.routes.map((route, index) => {

@@ -10,6 +10,8 @@ export default function HomeScreen() {
     <View className="flex-1 items-center justify-center p-4">
       <Text className="text-2xl font-bold mb-4">Welcome to Dui!</Text>
       <Text className="text-foreground text-lg">Theme: {colorScheme}</Text>
+      <Text className="text-success">Success Text (green)</Text>
+      <Text className="text-error">Error Text (red)</Text>
       <Text className="text-foreground">Foreground Text</Text>
       <Text className="text-primary">Primary Text (blue)</Text>
       <Text className="text-secondary">Secondary Text (purple)</Text>

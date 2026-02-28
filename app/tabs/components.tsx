@@ -4,6 +4,7 @@ import {
   CardContent,
   CardHeader,
   Icon,
+  OutlineButton,
   OutlineIconButton,
   SafeAreaScrollView,
   Switch,
@@ -46,10 +47,18 @@ export default function ComponentsScreen() {
         <View className="flex flex-col gap-4">
           <Text type="h2">Buttons</Text>
           <Button text="Default" />
-          <Button color="primary" text="Primary" />
           <Button color="secondary" text="Secondary" />
+          <Button color="primary" text="Primary" />
           <Button color="success" text="Success" />
           <Button color="danger" text="Danger" />
+        </View>
+        <View className="flex flex-col gap-4">
+          <Text type="h2">Buttons Outline</Text>
+          <OutlineButton text="Default" />
+          <OutlineButton color="secondary" text="Secondary" />
+          <OutlineButton color="primary" text="Primary" />
+          <OutlineButton color="success" text="Success" />
+          <OutlineButton color="danger" text="Danger" />
         </View>
         <View className="flex flex-col gap-4">
           <Text type="h2">Outline Icon Buttons</Text>
