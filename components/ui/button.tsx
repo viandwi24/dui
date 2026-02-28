@@ -19,6 +19,7 @@ const buttonVariants = cva(
           "border bg-background shadow-background-300 dark:shadow-background-700 border-background-300 dark:border-background-700",
         danger: "bg-red-400 shadow-red-500",
         success: "bg-green-400 shadow-green-500",
+        white: "bg-neutral-50 border-blue-200 shadow-blue-200",
       },
       size: {
         sm: "px-2.5 py-1.5",
@@ -43,6 +44,7 @@ const buttonSubTextVariants = cva("font-bold uppercase", {
       primary: "text-neutral-50 dark:text-neutral-50",
       secondary: "text-neutral-950 dark:text-neutral-50",
       success: "text-neutral-50 dark:text-neutral-50",
+      white: "text-primary",
     },
     size: {
       sm: "",

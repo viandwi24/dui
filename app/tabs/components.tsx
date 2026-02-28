@@ -6,18 +6,16 @@ import {
   Icon,
   OutlineButton,
   OutlineIconButton,
-  SafeAreaScrollView,
+  SafeAreaScreen,
   Switch,
   Text,
   View,
-  useSafeAreaInsets,
 } from "@/components/ui";
 import { useColorScheme } from "@/hooks/use-color-scheme";
 import { useCallback, useState } from "react";
 import { Appearance } from "react-native";
 
 export default function ComponentsScreen() {
-  const insets = useSafeAreaInsets();
   const colorScheme = useColorScheme();
 
   const [switchEnabled, setSwitchEnabled] = useState(false);
@@ -34,9 +32,8 @@ export default function ComponentsScreen() {
   }, [colorScheme]);
 
   return (
-    <SafeAreaScrollView bottom={false} className="flex-1">
+    <SafeAreaScreen bottom={false} title="Components">
       <View className="flex flex-col gap-6 p-4">
-        <Text type="title">Components</Text>
         <View className="flex flex-col gap-4">
           <Text type="h2">Theme</Text>
           <Switch
@@ -167,6 +164,6 @@ export default function ComponentsScreen() {
           </View>
         </View>
       </View>
-    </SafeAreaScrollView>
+    </SafeAreaScreen>
   );
 }

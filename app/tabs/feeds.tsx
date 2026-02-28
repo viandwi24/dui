@@ -1,29 +1,36 @@
-import { SafeAreaScreen, Text, View } from "@/components/ui";
+import {
+  Button,
+  Card,
+  CardHeader,
+  SafeAreaScreen,
+  Text,
+  View,
+} from "@/components/ui";
 
 export default function FeedsScreen() {
   return (
     <SafeAreaScreen bottom={false} title="Feeds">
-      <View className="flex flex-col items-center gap-4 bg-red-500 mt-4">
-        <Text className="text-2xl font-bold mb-4">Feeds</Text>
-        <Text className="text-foreground text-lg">
-          This is the Feeds tab. You can display your feed content here.
-        </Text>
-        <Text className="text-2xl font-bold mb-4">Welcome to Dui!</Text>
-      </View>
-      {Array.from({ length: 20 }).map((_, i) => (
-        <View
-          key={i}
-          className="flex flex-row items-center gap-4 bg-background rounded-lg p-4 shadow-md"
-        >
-          <View className="h-12 w-12 bg-primary rounded-full" />
-          <View>
-            <Text className="font-bold">Feed Item {i + 1}</Text>
-            <Text className="text-muted">
-              This is a description of feed item {i + 1}.
-            </Text>
+      <View className="p-4 flex flex-col gap-6">
+        <View className="bg-primary min-h-45 rounded-2xl overflow-hidden p-4">
+          <Text className="font-bold text-3xl w-56">
+            Tambahkan teman dan dapatkan pengalaman seutuhnya!
+          </Text>
+          <View className="mt-4">
+            <Button color="white" text="Find Friends" />
           </View>
         </View>
-      ))}
+        {Array.from({ length: 10 }).map((_, i) => (
+          <Card key={i}>
+            <CardHeader>
+              <Text className="text-2xl font-bold">Feed Item {i + 1}</Text>
+            </CardHeader>
+            <Text>
+              This is the content of feed item {i + 1}. It can contain text,
+              images, or any other content you want to display in the feed.
+            </Text>
+          </Card>
+        ))}
+      </View>
     </SafeAreaScreen>
   );
 }

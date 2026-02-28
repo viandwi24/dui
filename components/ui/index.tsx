@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 import { View } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Text } from "./text";
@@ -77,6 +78,7 @@ export function SafeAreaScreen({
   headerActions?: React.ReactNode;
 }) {
   const insets = useSafeAreaInsets();
+  const [scrolled, setScrolled] = useState(false);
   return (
     <View
       style={{
@@ -85,14 +87,23 @@ export function SafeAreaScreen({
       }}
       className={cn("flex-1 flex flex-col", className)}
     >
-      <View className="bg-background border-b-2 border-background-500/50 px-4 h-12.75 pt-3 flex flex-row items-center justify-between">
-        <Text className="text-2xl font-bold">{title}</Text>
+      {/* screen header */}
+      <View
+        className={cn(
+          "bg-background px-4 h-12.75 pt-3 flex flex-row items-center justify-between border-b-2",
+          scrolled ? "border-background-500/50" : "border-transparent",
+        )}
+      >
+        <Text className="text-3xl font-bold">{title}</Text>
         {headerActions}
       </View>
+      {/* screen main */}
       <ScrollView
         className={cn("flex-1", className)}
         indicatorClassName={classNameIndicator}
         contentContainerClassName={classNameContentContainer}
+        onScroll={(e) => setScrolled(e.nativeEvent.contentOffset.y > 20)}
+        scrollEventThrottle={16}
       >
         {children}
       </ScrollView>
